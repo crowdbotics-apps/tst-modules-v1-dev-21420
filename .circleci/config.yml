@@ -53,6 +53,8 @@ jobs:
     working_directory: ~/build
     docker:
       - image: reactnativecommunity/react-native-android:3.2
+    environment:
+      - TERM: "dumb"
     steps:
       - checkout:
           path: ~/build
