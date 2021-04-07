@@ -53,12 +53,6 @@ jobs:
     working_directory: ~/build
     docker:
       - image: reactnativecommunity/react-native-android:3.2
-    environment:
-      - TERM: "dumb"
-      - ADB_INSTALL_TIMEOUT: 10
-      - _JAVA_OPTIONS: "-Xmx2g -XX:MaxMetaspaceSize=512m -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap"
-      - GRADLE_OPTS: '-Dorg.gradle.daemon=false -Dorg.gradle.jvmargs="-XX:+HeapDumpOnOutOfMemoryError"'
-      - BUILD_THREADS: 2
     steps:
       - checkout:
           path: ~/build
