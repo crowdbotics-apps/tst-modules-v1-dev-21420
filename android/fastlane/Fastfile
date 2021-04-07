@@ -41,7 +41,7 @@ platform(:android) do
 
   desc('Deployment to Appetize')
   lane(:deploy_appetize) do
-    gradle(task: 'assemble', build_type: 'Release', flags: '-Pjobs=$BUILD_THREADS')
+    gradle(task: 'assemble', build_type: 'Release')
 
     public_key = get_appetize_public_key('android', base_name)
 
